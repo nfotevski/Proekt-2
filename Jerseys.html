@@ -1,0 +1,108 @@
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>FC Barcelona Fan Shop-Jerseys</title>
+            <link rel="stylesheet" type="text/css" href="Online_Shop_Styles-ShopJ.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=[pt_ed87350138c311b05dee6a334d89d2]"></script>
+            <script>
+                $(document).ready(function()
+                {
+                    $("#cmt1").on("click", function(){
+                        var cmtText = $("#CommentH").val();
+                        appendComment("t1",cmtText);
+                    });
+
+                    $("#cmt2").on("click", function(){
+                        var cmtText = $("#CommentA").val();
+                        appendComment("t2",cmtText);
+                    });
+
+                    $("#cmt3").on("click", function(){
+                        var cmtText = $("#CommentT").val();
+                        appendComment("t3",cmtText);
+                    });
+
+                    function appendComment(tableID, cmtText){
+                        if(cmtText.trim() !== " ")
+                        $("#" + tableID + " tbody").append("<tr><td>->" + cmtText + "</td></tr>")
+                        
+                        $("#CommentH , #CommentA, #CommentT").val('');
+                    }       
+                   
+                    
+                    var lightMode = true;
+
+                    $('#theme-toggle').on('click', function() {
+                        if (lightMode) {
+                            $('body').css('background-color', '#121212'); 
+                            $('h2,h4').css('color', 'rgb(237, 187, 0)')
+                        } else {
+                            $('body').css('background-color', 'rgb(237, 187, 0)'); 
+                            $('h2,h4').css('color', 'rgb(219,0,48)')
+                        }
+                             lightMode = !lightMode;
+                    });
+                });
+            </script>
+        </head>
+        <body>
+            <div class="image-container">
+                <div>
+                    <label for="HJersey"><h2>Home Jersey 23/24 Season</h2></label>
+                    <a href="https://www.amazon.com/Nike-2023-2024-Barcelona-Football-T-Shirt/dp/B0BR5TVDGQ/ref=sr_1_1?crid=2DJGUH7HLH1WJ&keywords=fc+barcelona+jersey+2023-2024&qid=1699897511&sprefix=fc+barcelona+jersey+20%2Caps%2C191&sr=8-1">
+                        <img src="DresDomasen-removebg-preview.png" id="HJersey" alt="Home Jersey">
+                    </a>
+                    <div class="like-and-price" data-lyket-type="like" data-lyket-id="home-jersey-like" data-lyket-template="Twitter">
+                        <h4>Price: $109.63</h4>
+                    </div>
+                    <form>
+                        <textarea name="Comment" id="CommentH" cols="30" rows="4" placeholder="Leave a comment"></textarea>
+                        <button type="button" id="cmt1">Add comment</button>
+                    </form>
+                    <table id="t1">
+                        <tbody>
+                            <tr>Comments:</tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <label for="AJersey"><h2>Away Jersey 23/24 Season</h2></label>
+                    <a href="https://www.amazon.com/Nike-2023-2024-Barcelona-Football-T-Shirt/dp/B0C94GC8P8/ref=sr_1_2?crid=2DJGUH7HLH1WJ&keywords=fc%2Bbarcelona%2Bjersey%2B2023-2024&qid=1699897511&sprefix=fc%2Bbarcelona%2Bjersey%2B20%2Caps%2C191&sr=8-2&th=1">
+                        <img src="DresGostinskii-removebg-preview.png" id="AJersey" alt="Away Jersey">
+                    </a>
+                    <div class="like-and-price" data-lyket-type="like" data-lyket-id="away-jersey-like" data-lyket-template="Twitter">
+                        <h4>Price: $103.91</h4>
+                    </div>
+                    <form>
+                        <textarea name="Comment" id="CommentA" cols="30" rows="4" placeholder="Leave a comment"></textarea>
+                        <button type="button" id="cmt2">Add comment</button>
+                    </form>
+                    <table id="t2">
+                        <tbody>
+                            <tr>Comments:</tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <label for="TJersey"><h2>Third kit 23/24 Season</h2></label>
+                    <a href="https://www.amazon.com/Nike-2023-2024-Barcelona-Football-T-Shirt/dp/B0C94LGBZP/ref=sr_1_4?crid=2DJGUH7HLH1WJ&keywords=fc+barcelona+jersey+2023-2024&qid=1699897511&sprefix=fc+barcelona+jersey+20%2Caps%2C191&sr=8-4">
+                        <img src="DresT-removebg-preview.png" id="TJersey" alt="Third Kit">
+                    </a>
+                    <div class="like-and-price" data-lyket-type="like" data-lyket-id="third-kit-like" data-lyket-template="Twitter">
+                        <h4>Price: $103.91</h4>
+                    </div>
+                    <form>
+                        <textarea name="Comment" id="CommentT" cols="30" rows="4" placeholder="Leave a comment"></textarea>
+                        <button type="button" id="cmt3">Add comment</button>
+                    </form>
+                    <table id="t3">
+                        <tbody>
+                            <tr>Comments:</tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <button id="theme-toggle">Toggle Theme</button>
+        </body>
+    </html>

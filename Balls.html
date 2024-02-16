@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FC Barcelona Fan Shop-Training Balls</title>
+        <link rel="stylesheet" type="text/css" href="Online_Shop_Styles-ShopB.css">
+        <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=[pt_ed87350138c311b05dee6a334d89d2]"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("#cmt1").on("click", function(){
+                    var cmtText = $("#Comment1").val();
+                    appendComment("t1",cmtText);
+                });
+
+                $("#cmt2").on("click", function(){
+                    var cmtText = $("#Comment2").val();
+                    appendComment("t2",cmtText);
+                });
+
+                function appendComment(tableID, cmtText){
+                    if(cmtText.trim() !== " ")
+                    $("#" + tableID + " tbody").append("<tr><td>->" + cmtText + "</td></tr>")
+                    
+                    $("#Comment1 , #Comment2").val('');
+                }   
+                
+                var lightMode = true;
+
+                    $('#theme-toggle').on('click', function() {
+                        if (lightMode) {
+                            $('body').css('background-color', '#121212'); 
+                            $('h2,h4').css('color', 'rgb(237, 187, 0)')
+                        } else {
+                            $('body').css('background-color', 'rgb(237, 187, 0)'); 
+                            $('h2,h4').css('color', 'rgb(219,0,48)')
+                        }
+                             lightMode = !lightMode;
+                    });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="image-container">
+            <div class="item-container">
+                <label for="Topka1"><h2>Barcelona themed ball</h2></label>
+                <a href="https://www.ebay.com/itm/126136337844?_trkparms=amclksrc%3DITM%26aid%3D1110013%26algo%3DHOMESPLICE.SIMRXI%26ao%3D1%26asc%3D20201210111452%26meid%3Dc6a9a32637d748dbaeeaf291775a7772%26pid%3D101196%26rk%3D2%26rkt%3D3%26sd%3D155862986427%26itm%3D126136337844%26pmt%3D1%26noa%3D0%26pg%3D4429486%26algv%3DPromotedRVIPbooster&_trksid=p4429486.c101196.m2219&amdata=cksum%3A126136337844c6a9a32637d748dbaeeaf291775a7772%7Cenc%3AAQAIAAAA8JsbtOKd5uIU0OgsJNCgXCMMpub68XkO0u223hE0Mu0hYOgZsr%252Fr2Xq58PI0rRsGX715k5lVJiAj1R83UNWCl5CA16xpRiFEfXebay8g4pDI5ZMsyaLznH22m7OpmU%252BAF09%252BwCA0VknG3ePTRSKQvag4%252FfyK%252FMLVQWIAsP2Z34d5EZd%252BQiRHmazdwCGUgQDOi9wApTWOgFVY%252BqFWpFo8A77GHsGlHFiX5TWluUIt90DkE4wORNjYbgMaeOiagWehSg6ncpfJeXcSqby7JodhNeMSJ4LfX2SR%252FJRTeZVKTPUUezb8Aw5MPZpSzXxZ%252BawlgA%253D%253D%7Campid%3APL_CLK%7Cclp%3A4429486">
+                    <img src="Topka1-removebg-preview.png" id="Topka1" alt="Barcelona themed ball">
+                </a>
+                <div class="like-and-price" data-lyket-type="like" data-lyket-id="likeid" data-lyket-template="Twitter">
+                    <h4>Price: $19.95</h4>
+                </div>
+                <div class="comment-section">
+                    <form>
+                        <textarea name="Comment" id="Comment1" cols="60" rows="4" placeholder="Leave a comment"></textarea>
+                        <button type="button" id="cmt1">Add comment</button>
+                    </form>
+                    <table id="t1">
+                        <tbody>
+                            <tr>Comments:</tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="item-container">
+                <label for="SBall"><h2>FC Barcelona signed ball</h2></label>
+                <a href="https://www.ebay.com/itm/133892992759?hash=item1f2ca4eef7:g:ReAAAOSwuNdgYdl9&amdata=enc%3AAQAIAAAA8BqaWfWBWF6uowagfSNLRP%2Btsy%2FXrZ0oxvpRhlmLCAafkMUe9Z3jbH8gCaY%2B2AdrnJbgeKCxNw0Gww77cgssSwoRSog55%2FUQr29z0WgIjq3x57KDDQCj36Rx6clO6Hiw%2F7U9EGncUPkNiYPnme0oelmKYv0LjOtQKbBKqSao%2BwmJs%2B1NEI4Eweijl%2FAZ6c1sEyrYziNbAl2Q8WZY5VnsZqMdhDLiSWgKAuzPQlsM97fFDz5dmRqwQNOlswCSPN%2FbEk6Ck7oX0INJ8mIcBmqvyQNUKOiVsqBrESHyBthFs8mnBn9BcB1ChNXIFUjkBnqG%2BA%3D%3D%7Ctkp%3ABk9SR8Cbqab5Yg">
+                    <img src="Topkaptopisi-removebg-preview.png"  id="SBall" alt="FC Barcelona signed ball">
+                </a>
+                <div class="like-and-price" data-lyket-type="like" data-lyket-id="likeid" data-lyket-template="Twitter">
+                    <h4>Price: $36.64</h4>
+                </div>
+                <div class="comment-section"></div>
+                <form>
+                    <textarea name="Comment" id="Comment2" cols="60" rows="4" placeholder="Leave a comment"></textarea>
+                    <button type="button" id="cmt2">Add comment</button>
+                </form>
+                <table id="t2">
+                    <tbody>
+                        <tr>Comments:</tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+        <button id="theme-toggle">Toggle Theme</button>
+    </body>
+</html>

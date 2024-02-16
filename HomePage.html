@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FC Barcelona Fan Shop-Home Page</title>
+        <link rel="stylesheet" type="text/css" href="Online_Shop_Styles-Home.css">
+        <script src="https://kit.fontawesome.com/e2536492d1.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function()
+{
+
+            var lightMode = true;
+
+                    $('#theme-toggle').on('click', function() {
+                        if (lightMode) {
+                            $('body').css('background-color', '#121212'); 
+                            $('h2').css('color', 'rgb(237, 187, 0)');
+                            
+                        } else {
+                            $('body').css('background-color', 'rgb(237, 187, 0)'); 
+                            $('h2').css('color', 'rgb(219,0,48)');
+                            
+                        }
+                             lightMode = !lightMode;
+                    });
+    });
+        </script>
+    </head>
+    <body>
+        <div class="image-container">
+            <div>
+            <label for="Dresovi"><h2>Jerseys</h2></label>
+            <a href="Jerseys.html">
+                <img src="Dresovi.jpg" id="Dresovi" width = "80%" height = "85%" alt="Match Jerseys">
+            </a>
+            </div>
+            <div>
+            <label for="Balls"><h2>Footballs</h2></label>
+            <a href=" Balls.html">
+                <img src="Topka 1.jpg"  id="Balls" width = "40%" height ="65%" alt="Footballs">
+            </a>
+            </div>
+            <div>
+            <label for="Accessories"><h2>Accessories</h2></label>
+            <a href=" Accessories.html">
+                <img src="Accessories.jpg"  id="Accessories" width = "80%" height = "85%" alt="Accessories">
+            </a>
+            </div>  
+        </div>
+        <button id="theme-toggle">Toggle Theme</button>
+    </body>
+    
+</html> 

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+    <link rel="stylesheet" type="text/css" href="Anketa.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function() {
+            $('form').submit(function() {
+                alert('Thanks for helping us get better!');
+            });    
+            
+            var originalColor = $("#improvements").css('background-color'); 
+
+                $("#improvements").keyup(function () {
+                $(this).css('background-color', 'rgb(245,245,190)'); 
+            });
+
+            var originalColor = $("#comments").css('background-color'); 
+
+                $("#comments").keyup(function () {
+                $(this).css('background-color', 'rgb(245,245,190)'); 
+            });
+
+            var originalColor = $('select').css('background-color'); 
+
+                $('select').click(function () {
+                $(this).css('background-color', 'rgb(245,245,190)'); 
+            });
+
+            var lightMode = true;
+
+                    $('#theme-toggle').on('click', function() {
+                        if (lightMode) {
+                            $('body').css('background-color', '#121212'); 
+                            $('h2,h4').css('color', 'rgb(237, 187, 0)')
+                        } else {
+                            $('body').css('background-color', 'rgb(237, 187, 0)'); 
+                            $('h2,h4').css('color', 'rgb(219,0,48)')
+                        }
+                             lightMode = !lightMode;
+                    });
+        }); 
+    </script>   
+</head>
+<body>
+
+    <div class="container">
+        <h1>Website Survey</h1>
+
+        <form>
+
+            <label for="experience">How would you rate your experience with our website?</label>
+            <select id="experience" name="experience" required>
+                <option value="excellent" class="option">Excellent</option>
+                <option value="good" class="option">Good</option>
+                <option value="average" class="option">Average</option>
+                <option value="poor" class="option">Poor</option>
+            </select>
+
+            <label for="improvements">What improvements would you suggest for our website?</label>
+            <textarea id="improvements" name="improvements" rows="4" cols="50"></textarea>
+
+            <div class="source-options">
+                <label>How did you find out about our website?</label>
+                <input type="radio" id="socialMedia" name="source" value="socialMedia">Social Media
+                <input type="radio" id="searchEngine" name="source" value="searchEngine">Search Engine</input>
+                <input type="radio" id="friend" name="source" value="friend">Friend/Family
+                <input type="radio" id="other" name="source" value="other">Other
+            </div>
+
+            <label for="comments">Any additional comments or suggestions?</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+
+            <div class="button-container">
+                <button type="submit">Submit</button>
+                <input type="reset" value="Reset">
+            </div>
+
+        </form>
+        <button id="theme-toggle">Toggle Theme</button>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FC Barcelona Fan Shop-Log In</title>
+        <link rel="stylesheet" type="text/css" href="Online_Shop_Styles-LogIn.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function()
+{
+    $('#pwd-toggle').on('click', function () {
+            var pwdInput = $('#pwd');
+            
+            if (pwdInput.length > 0) {
+                var isVisible = pwdInput.prop('type') === 'text';
+                
+                
+                pwdInput.prop('type', isVisible ? 'password' : 'text');
+            } else {
+                console.error('Password input not found.');
+            }   
+        });
+
+    var originalColor = $('input').css('background-color'); 
+
+            $('input').keyup(function () {
+                $(this).css('background-color', 'rgb(245,245,190)'); 
+            });
+
+            var lightMode = true;
+
+                    $('#theme-toggle').on('click', function() {
+                        if (lightMode) {
+                            $('body').css('background-color', '#121212'); 
+                            $('h1').css('color', 'rgb(219,0,48)');
+                            $('h3').css('color','rgb(237, 187, 0)');
+                            $('h4').css('color','rgb(237, 187, 0)');
+                        } else {
+                            $('body').css('background-color', 'rgb(237, 187, 0)'); 
+                            $('h1').css('color', 'rgb(219,0,48)');
+                            $('h3').css('color','rgb(219,0,48)');
+                            $('h4').css('color','#004080;');
+                        }
+                             lightMode = !lightMode;
+                    });
+    });
+        </script>
+    </head>
+    <body>
+        <h1>Welcome to our Online FC Barcelona Fan Shop!</h1>
+        <h3>Please fill in your login info</h3>
+        <table  border="3">
+        <form action="HomePage.html" method="get">
+            <tr>
+            <td><label for="Fname">First Name:</label>
+            <input type="text" id="Fname" class="Fname" required></td>
+            </tr>
+            <tr>
+            <td><label for="Lname">Last Name:</label>   
+            <input type="text" id="Lname" class="Lname" ></td>
+            </tr>
+            <tr>
+            <td><label for="email">Email:</label>
+            <input type="text" id="email" class="email" required></td>
+            </tr>
+            <tr>
+            <td><label for="pwd">Password:</label>
+            <input type="password" id="pwd" class="pwd" required>
+            <button type="button" id="pwd-toggle">Toggle Password</button></td>
+            </tr>
+            <tr>
+            <td colspan="2">
+            <button type="submit" id="Log In" >Log In</button>
+            <input type="reset" id="Clear" value="Clear">
+            </td>
+            </tr>
+        </form>
+        </table>
+        <footer>
+            <p>Contact us on:</p>
+            <p>070/123-456</p>
+            <a href = "https://mail.google.com/mail/u/0/#inbox">Email</a>
+        </footer>
+        <br>
+        <h4>Click the logo for a quick survey!</h4>
+            <a href = "Anketa.html">
+                <img src="FcBarcelona_Logo-removebg-preview.png" alt="" height="4.5%" width="4.5%">
+            </a>
+            </br>
+            <button id="theme-toggle">Toggle Theme</button>
+    </body>
+
+</html>

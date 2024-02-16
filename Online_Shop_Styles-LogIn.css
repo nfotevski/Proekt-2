@@ -1,0 +1,86 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: rgb(237, 187, 0); 
+}
+footer{
+    margin-bottom: -35px;
+}
+
+h1 {
+    color: #004080; 
+}
+
+h3{
+    color: #002633; 
+}
+h4{
+    color: #004080;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 20px auto;
+    background-color: #004080; 
+    color: #fff; 
+}
+
+table, th, td {
+    border: 1px solid #002633; 
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+button {
+    background-color: #002633; 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004080; 
+}
+
+input[type="reset"] {
+    background-color: #FF0000; 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="reset"]:hover {
+    background-color: #BD0000; 
+}
+p{
+    color: rgb(219,0,48);
+}
+a{
+    color: rgb(219,0,48);
+}
+#theme-toggle {
+    position: fixed;
+    top: 3px;
+    right: 3px;
+    background-color: #d32f2f; /* FC Barcelona red */
+    color: #fff; /* Light text color */
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

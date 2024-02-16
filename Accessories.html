@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FC Barcelona Fan Shop-Accessories</title>
+        <link rel="stylesheet" type="text/css" href="Online_Shop_Styles-ShopA.css">
+        <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_ed87350138c311b05dee6a334d89d2]"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("#cmt1").on("click", function(){
+                    var cmtText = $("#CommentP").val();
+                    appendComment("t1",cmtText);
+                });
+
+                $("#cmt2").on("click", function(){
+                    var cmtText = $("#CommentB").val();
+                    appendComment("t2",cmtText);
+                });
+
+                $("#cmt3").on("click", function(){
+                    var cmtText = $("#CommentH").val();
+                    appendComment("t3",cmtText);
+                });
+
+                function appendComment(tableID, cmtText){
+                    if(cmtText.trim() !== " ")
+                    $("#" + tableID + " tbody").append("<tr><td>->" + cmtText + "</td></tr>")
+                    
+                    $("#CommentP , #CommentB, #CommentH").val('');
+                }
+                
+                var lightMode = true;
+
+                    $('#theme-toggle').on('click', function() {
+                        if (lightMode) {
+                            $('body').css('background-color', '#121212'); 
+                            $('h2,h4').css('color', 'rgb(237, 187, 0)')
+                        } else {
+                            $('body').css('background-color', 'rgb(237, 187, 0)'); 
+                            $('h2,h4').css('color', 'rgb(219,0,48)')
+                        }
+                             lightMode = !lightMode;
+                    });       
+            });
+        </script>
+        
+    </head>
+
+    <body>
+        <div class="image-container">
+            <div>
+                <label for="pencil"><h2>Pencils</h2></label>
+                <a href="https://store.fcbarcelona.com/products/fc-barcelona-projector-pen">
+                    <img src="Penkalo-removebg-preview.png" id="pencil" width="50%" height="65%" alt="Barcelona themed Pencils">
+                </a>
+                <div class="like-and-price" data-lyket-type="like" data-lyket-id="pencil-like" data-lyket-template="Twitter">
+                    <h4>Price: $7.99</h4>
+                </div>
+                <form>
+                    <textarea name="Comment" id="CommentP" cols="30" rows="4" placeholder="Leave a comment"></textarea>
+                    <button type="button" id="cmt1">Add comment</button>
+                </form>
+                <table id="t1">
+                    <tbody>
+                        <tr>Comments:</tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <label for="Backpack"><h2>Backpack</h2></label>
+                <a href="https://store.fcbarcelona.com/products/blue-barca-nike-backpack">
+                    <img src="Backpack-removebg-preview.png" id="Backpack" width="50%" height="65%" alt="Barcelona themed Backpack">
+                </a>
+                <div class="like-and-price" data-lyket-type="like" data-lyket-id="backpack-like" data-lyket-template="Twitter">
+                    <h4>Price: $29.99</h4>
+                </div>
+                <form>
+                    <textarea name="Comment" id="CommentB" cols="30" rows="4" placeholder="Leave a comment"></textarea>
+                    <button type="button" id="cmt2">Add comment</button>
+                </form>
+                <table id="t2">
+                    <tbody>
+                        <tr>Comments:</tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <label for="Headphones"><h2>Headphones</h2></label>
+                <a href="https://store.fcbarcelona.com/products/wireless-headphones-with-charging-box">
+                    <img src="Slushalki-removebg-preview.png" id="Headphones" width="50%" height="65%" alt="Barcelona themed Headphones">
+                </a>
+                <div class="like-and-price" data-lyket-type="like" data-lyket-id="headphones-like" data-lyket-template="Twitter">
+                    <h4>Price: $49.99</h4>
+                </div>
+                <form>
+                    <textarea name="Comment" id="CommentH" cols="30" rows="4" placeholder="Leave a comment"></textarea>
+                    <button type="button" id="cmt3">Add comment</button>
+                </form>
+                <table id="t3">
+                    <tbody>
+                        <tr>Comments:</tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <button id="theme-toggle">Toggle Theme</button>
+    </body>
+</html>

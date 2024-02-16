@@ -1,0 +1,93 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: rgb(237, 187, 0);
+    
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #004080;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    display: inline;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.source-options {
+    text-align: left;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+button,
+input[type="reset"] {
+    background-color: #002633;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="reset"]:hover {
+    background-color: rgb(219,0,48);
+}
+
+p {
+    color: rgb(219, 0, 48);
+}
+
+a {
+    color: rgb(219, 0, 48);
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#improvements
+{
+    background-color: white;
+}
+
+#comments{
+    background-color: white;
+}
+
+#experience{
+    background-color: white;
+}
+#theme-toggle {
+    position: fixed;
+    top: 3px;
+    right: 3px;
+    background-color: #d32f2f; /* FC Barcelona red */
+    color: #fff; /* Light text color */
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
